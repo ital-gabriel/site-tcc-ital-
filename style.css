@@ -1,292 +1,62 @@
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
-    scroll-behavior: smooth;
-}
-
-body {
-    background: #ffffff;
-    color: #25213b;
-}
-
-/* MENU */
-
-header {
-    background: #ffffff;
-    padding: 22px 8%;
-    box-shadow: 0 2px 12px #0000000d;
-}
-
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo, footer h2 {
-    font-size: 27px;
-    color: #25213b;
-}
-
-.logo span, footer span {
-    color: #8957e5;
-}
-
-nav ul {
-    display: flex;
-    list-style: none;
-    gap: 25px;
-}
-
-nav a {
-    text-decoration: none;
-    color: #444;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-nav a:hover {
-    color: #8957e5;
-}
-
-/* INÍCIO */
-
-.inicio {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 90px 10%;
-    gap: 50px;
-    background: #f7f4ff;
-}
-
-.inicio-texto {
-    max-width: 550px;
-}
-
-.destaque {
-    color: #8957e5;
-    font-weight: bold;
-    letter-spacing: 2px;
-    font-size: 13px;
-}
-
-.inicio h1 {
-    font-size: 48px;
-    margin: 20px 0;
-    line-height: 1.2;
-}
-
-.inicio h1 span {
-    color: #8957e5;
-     font-size: 100px;
-}
-
-.inicio p {
-    color: #666;
-    font-size: 17px;
-    line-height: 1.8;
-    margin-bottom: 200px;
-}
-
-.botao {
-    display: inline-block;
-    background: #8957e5;
-    color: white;
-    text-decoration: none;
-    padding: 15px 25px;
-    border-radius: 9px;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-.botao:hover {
-    background: #6337b4;
-    transform: translateY(-3px);
-}
-
-.inicio-imagem img {
-    width: 100%;
-    max-width: 450px;
-    border-radius: 20px;
-    object-fit: cover;
-}
-
-/* SOBRE */
-
-.sobre {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 60px;
-    padding: 90px 10%;
-}
-
-.sobre-imagem img {
-    width: 350px;
-    height: 350px;
-    object-fit: cover;
-    border-radius: 20px;
-}
-
-.sobre-texto {
-    max-width: 550px;
-}
-
-.sobre-texto h2 {
-    font-size: 35px;
-    margin: 15px 0;
-}
-
-.sobre-texto p {
-    color: #666;
-    line-height: 1.8;
-    margin-bottom: 100px;
-}
-
-
-
-/* TÍTULOS */
-
-.titulo {
-    text-align: center;
-    margin-bottom:60px;
-}
-
-.titulo h2 {
-    font-size: 35px;
-    margin: 12px 0;
-}
-
-.titulo p {
-    color: #777;
-}
-
-
-/* SERVIÇOS */
-
-.servicos {
-    background: #f7f4ff;
-    padding: 85px 10%;
-}
-
-.servicos-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-}
-
-.servico-card {
-    background: white;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 5px 20px #00000008;
-    transition: 0.3s;
-}
-
-.servico-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 10px 25px #8957e522;
-}
-
-.icone {
-    font-size: 35px;
-    margin-bottom: 15px;
-}
-
-.servico-card h3 {
-    margin-bottom: 12px;
-    color: #25213b;
-}
-
-.servico-card p {
-    color: #777;
-    line-height: 1.7;
-}
-
-/* PORTFÓLIO */
-
-.portfolio {
-    padding: 85px 10%;
-}
-
-.portfolio-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-}
-
-.projeto {
-    background: #f7f4ff;
-    padding: 15px;
-    border-radius: 15px;
-    transition: 0.3s;
-}
-
-.projeto:hover {
-    transform: translateY(-5px);
-}
-
-.projeto img {
-    width: 100%;
-    height: 240px;
-    object-fit: cover;
-    border-radius: 10px;
-}
-
-.projeto h3 {
-    margin: 15px 5px 5px;
-}
-
-.projeto p {
-    color: #777;
-    margin: 5px;
-}
-
-/* CONTATO */
-
-.contato {
-    background: #25213b;
-    color: white;
-    text-align: center;
-    padding: 85px 20px;
-}
-
-.contato h2 {
-    font-size: 35px;
-    margin: 20px 0;
-}
-
-.contato p {
-    color: #ddd;
-    max-width: 550px;
-    margin: 0 auto 30px;
-    line-height: 1.8;
-}
-
-/* RODAPÉ */
-
-footer {
-    text-align: center;
-    padding: 35px 20px;
-    background: #f7f4ff;
-}
-
-footer p {
-    color: #777;
-    margin-top: 12px;
-}
-
-/* RESPONSIVIDADE */
+/* =================================
+   RESPONSIVIDADE PARA TABLETS
+================================= */
 
 @media (max-width: 900px) {
 
-    .inicio, .sobre {
+    header {
+        padding: 20px 5%;
+    }
+
+    .inicio,
+    .sobre {
         flex-direction: column;
         text-align: center;
+        padding: 65px 6%;
+    }
+
+    .inicio {
+        gap: 35px;
+    }
+
+    .inicio-texto,
+    .sobre-texto {
+        max-width: 100%;
+    }
+
+    .inicio h1 {
+        font-size: 40px;
+    }
+
+    .inicio h1 span {
+        font-size: 65px;
+    }
+
+    .inicio p {
+        margin-bottom: 30px;
+    }
+
+    .inicio-imagem img {
+        max-width: 400px;
+    }
+
+    .sobre {
+        gap: 35px;
+    }
+
+    .sobre-imagem img {
+        max-width: 320px;
+        height: auto;
+    }
+
+    .sobre-texto p {
+        margin-bottom: 30px;
+    }
+
+    .servicos,
+    .portfolio {
+        padding: 65px 6%;
     }
 
     .servicos-container,
@@ -295,33 +65,258 @@ footer p {
     }
 
     nav ul {
-        gap: 12px;
+        gap: 15px;
+    }
+
+    .titulo h2 {
+        font-size: 30px;
     }
 }
 
+/* =================================
+   RESPONSIVIDADE PARA CELULARES
+================================= */
+
 @media (max-width: 600px) {
+
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+
+    /* MENU */
+
+    header {
+        padding: 18px 5%;
+    }
 
     .navbar {
         flex-direction: column;
-        gap: 20px;
+        gap: 18px;
+    }
+
+    .logo {
+        font-size: 24px;
+    }
+
+    nav {
+        width: 100%;
     }
 
     nav ul {
+        display: flex;
         flex-wrap: wrap;
         justify-content: center;
+        gap: 12px 18px;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    /* INÍCIO */
+
+    .inicio {
+        flex-direction: column;
+        padding: 50px 6%;
+        gap: 30px;
+        text-align: center;
+    }
+
+    .inicio-texto {
+        width: 100%;
+    }
+
+    .destaque {
+        font-size: 11px;
     }
 
     .inicio h1 {
-        font-size: 35px;
+        font-size: 32px;
+        margin: 15px 0;
     }
 
-    .servicos-container,
-    .portfolio-container {
-        grid-template-columns: 1fr;
+    .inicio h1 span {
+        font-size: 45px;
+    }
+
+    .inicio p {
+        font-size: 15px;
+        line-height: 1.7;
+        margin-bottom: 25px;
+    }
+
+    .botao {
+        padding: 13px 22px;
+        font-size: 14px;
+    }
+
+    .inicio-imagem img {
+        width: 100%;
+        max-width: 100%;
+        border-radius: 15px;
+    }
+
+    /* SOBRE */
+
+    .sobre {
+        flex-direction: column;
+        padding: 55px 6%;
+        gap: 25px;
+        text-align: center;
     }
 
     .sobre-imagem img {
         width: 100%;
+        max-width: 300px;
         height: auto;
+    }
+
+    .sobre-texto h2 {
+        font-size: 27px;
+    }
+
+    .sobre-texto p {
+        font-size: 15px;
+        line-height: 1.7;
+        margin-bottom: 25px;
+    }
+
+    /* TÍTULOS */
+
+    .titulo {
+        margin-bottom: 35px;
+    }
+
+    .titulo h2 {
+        font-size: 27px;
+    }
+
+    .titulo p {
+        font-size: 14px;
+    }
+
+    /* SERVIÇOS */
+
+    .servicos {
+        padding: 55px 6%;
+    }
+
+    .servicos-container {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .servico-card {
+        padding: 25px;
+    }
+
+    .icone {
+        font-size: 30px;
+    }
+
+    .servico-card h3 {
+        font-size: 19px;
+    }
+
+    .servico-card p {
+        font-size: 14px;
+    }
+
+    /* PORTFÓLIO */
+
+    .portfolio {
+        padding: 55px 6%;
+    }
+
+    .portfolio-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .projeto {
+        padding: 12px;
+    }
+
+    .projeto img {
+        width: 100%;
+        height: 220px;
+    }
+
+    .projeto h3 {
+        font-size: 18px;
+    }
+
+    .projeto p {
+        font-size: 14px;
+    }
+
+    /* CONTATO */
+
+    .contato {
+        padding: 60px 6%;
+    }
+
+    .contato h2 {
+        font-size: 27px;
+    }
+
+    .contato p {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    /* RODAPÉ */
+
+    footer {
+        padding: 30px 15px;
+    }
+
+    footer h2 {
+        font-size: 23px;
+    }
+
+    footer p {
+        font-size: 13px;
+    }
+}
+
+/* =================================
+   CELULARES MUITO PEQUENOS
+================================= */
+
+@media (max-width: 380px) {
+
+    .inicio h1 {
+        font-size: 27px;
+    }
+
+    .inicio h1 span {
+        font-size: 38px;
+    }
+
+    .logo {
+        font-size: 21px;
+    }
+
+    nav ul {
+        gap: 10px;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+    .sobre-texto h2,
+    .titulo h2,
+    .contato h2 {
+        font-size: 24px;
+    }
+
+    .projeto img {
+        height: 190px;
     }
 }
